@@ -1,0 +1,70 @@
+*{
+	font-family:'Otomanopee One', sans-serif;
+}
+
+body{
+	/*PARA BAJAR TODA LA PÁGINA 100 PX PARA ABAJO*/
+	padding-top: 80px;
+	background: #E6EEF0 ;
+
+}
+
+.menu__div{
+	font-family:'Otomanopee One', sans-serif;;
+	background:black;
+	font-weight: 1000;
+	color:white;
+	font-size: 30px;
+	margin:-90px;
+	line-height:50px;
+	padding: 0px 48vw;
+	text-align:center;
+	box-shadow: 4px 4px 5px 0 #040404;
+	position: fixed;
+}
+
+.bienvenidos__h2{
+	font-family:'Otomanopee One', sans-serif;;
+	font-size: 800;
+    color: white;
+    background: black;
+    margin: 0vh 43vw;
+    padding: 5px 0px;
+    text-align: center;
+    border: 2px solid #040404;
+	box-shadow: 2px 0px 5px 0 #040404;
+	display: inline-block;
+}
+
+.imagenes__img{
+	display: inline-block;
+	border: 4px groove black;
+	margin: 20px 30px;
+	border-radius: 10px;
+	width: 250px;
+	height: 400px;
+}
+.imagenes__img2{
+	display: inline-block;
+	border: 4px groove black;
+	margin: 20px 30px;
+	border-radius: 10px;
+	width: 250px;
+	height: 400px;
+}
+.imagenes__img3{
+	display: inline-block;
+	border: 4px groove black;
+	margin: 20px 30px;
+	border-radius: 10px;
+	width: 250px;
+	height: 400px;
+}
+.imagenes__img4{
+	display: inline-block;
+	border: 4px groove black;
+	margin: 20px 30px;
+	border-radius: 10px;
+	width: 250px;
+	height: 400px;
+}
