@@ -1,0 +1,9 @@
+Pasos para agregar un repositorio en github:
+
+1- se va a la carpeta donde está el código con cd.
+2-Git init
+3-Git status
+4-Git add .
+5-Git status
+6-Git commit -m "texto"
+7-Git push -u origin master

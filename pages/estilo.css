@@ -71,14 +71,21 @@ body{
 }
 .imagenes__img:hover{
 border: 5px solid #10C9F8;
+transition: all 0.5s;
 	
-}.imagenes__img2:hover{
+}
+.imagenes__img2:hover{
 	border: 5px solid #10C9F8;
-
-}.imagenes__img3:hover{
-	border: 5px solid #10C9F8;
-
-}.imagenes__img4:hover{
-	border: 5px solid #10C9F8;
+	transition: all 0.5s;
 
 }
+.imagenes__img3:hover{
+	border: 5px solid #10C9F8;
+	transition: all 0.5s;
+
+}
+.imagenes__img4:hover{
+	border: 5px solid #10C9F8;
+	transition: all 0.5s;
+}
+
