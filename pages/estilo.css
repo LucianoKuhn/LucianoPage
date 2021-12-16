@@ -5,8 +5,7 @@
 
 body{
 	padding-top: 30px;
-	background: #ddd4e7 ;
-
+	background: #ddccf1 ;
 }
 
 /*MENU ESTATICO*/
@@ -37,7 +36,7 @@ body{
 	font-size: 18px;
     color: white;
     background: black;
-    margin: 0vh 36.7vw;
+    margin: 0vh 39.7vw;
     padding: 7px 0px;
     width: 310px;
     text-align: center;
@@ -48,70 +47,31 @@ body{
 
 
 /*SECTOR DE LAS IMAGENES*/
-.flex-imagenes{
+.flex-facultad{
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-evenly; 	 	
+	flex-wrap: wrap;	
+	justify-content: center; 	 	
+}
+.flex-facultad__p{
+ margin: 5px 800px;	
+ font-size: 25px;
+ font-family: 'Bakbak One', cursive;
+
 }
 .imagenes__img{
 	display: inline-block;
 	border: 4px groove black;
-	margin-top: 40px;
+	margin-top: 70px;
 	border-radius: 10px;
-	height: 400px;
-	order: 4;
-	
+	height: 300px;
+	background: rgb(112, 12, 121);	
 }
-.imagenes__img2{
-	display: inline-block;
-	border: 4px groove red;
-	margin-top: 40px;
-	border-radius: 10px;
-	height: 400px;
-	order: 7;
-}
-.imagenes__img3{
-	display: inline-block;
-	border: 4px groove black;
-	margin-top: 40px;
-	border-radius: 10px;
-	height: 400px;
-	order: 2;
 
-
-}
-.imagenes__img4{
-	display: inline-block;
-	border: 4px groove black;
-	margin-top: 40px;
-	border-radius: 10px;
-	height: 400px;
-	order: 1;
-}
-.imagenes__img:hover{
-border: 5px solid #58016b;
-transition: all 0.5s;
+.imagenes__img:hover{	
+border: 5px solid #000000;
 cursor: pointer;
-	
-}
-.imagenes__img2:hover{
-	border: 5px solid #58016b;
-	transition: all 0.5s;
-	cursor: pointer;
 
 }
-.imagenes__img3:hover{
-	border: 5px solid #58016b;
-	transition: all 0.5s;
-	cursor: pointer;
-
-}
-.imagenes__img4:hover{
-	border: 5px solid #58016b;
-	transition: all 0.5s;
-	cursor: pointer;
-}
-
 
 
 /* SECTOR MENU */
