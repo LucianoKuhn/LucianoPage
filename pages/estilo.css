@@ -59,13 +59,16 @@ body{
 	margin-top: 40px;
 	border-radius: 10px;
 	height: 400px;
+	order: 4;
+	
 }
 .imagenes__img2{
 	display: inline-block;
-	border: 4px groove black;
+	border: 4px groove red;
 	margin-top: 40px;
 	border-radius: 10px;
 	height: 400px;
+	order: 7;
 }
 .imagenes__img3{
 	display: inline-block;
@@ -73,6 +76,7 @@ body{
 	margin-top: 40px;
 	border-radius: 10px;
 	height: 400px;
+	order: 2;
 
 
 }
@@ -82,6 +86,7 @@ body{
 	margin-top: 40px;
 	border-radius: 10px;
 	height: 400px;
+	order: 1;
 }
 .imagenes__img:hover{
 border: 5px solid #58016b;

@@ -1,9 +1,8 @@
+
 *{
     font-weight: 100px;
     font-family:'Otomanopee One', sans-serif;
 }
-
-
 
 /*
 CODIGO DE LAS CAJAS FLEXIBLES
@@ -29,7 +28,9 @@ CODIGO DE LAS CAJAS FLEXIBLES
     align-self: flex-end;
 }
 */
-
+body{
+    background-color:#444 ;
+}
 
 
 /*TODO REFERIDO AL MENÚ*/
@@ -38,23 +39,23 @@ CODIGO DE LAS CAJAS FLEXIBLES
 }
 
 .nav{
-background-color: indianred;
+background-color: #58016b;
 }
 
 .nav__li{
     display: inline-block;  /*LOS ALINEA A LOS ICONOS*/
     padding: 12px;
-    color:#ffff;
+    color:white;
 }
 .nav__li:hover > a{ /*LO QUE HACEMOS ES CAMBIAR DE COLOR EL A CUANDO SE PASA EL CURSOR ARRIBA*/
-    color: black;
+    color: #E678FF;
 }
 .nav__li:hover > i{ /*LO QUE HACEMOS ES CAMBIAR DE COLOR EL I CUANDO SE PASA EL CURSOR ARRIBA*/
-    color:  black;
+    color:  #E678FF;
 }
 
 .nav__li a{
-    color: #ffff;
+    color: white;
     text-decoration: none;
 }
 .nav__li i{
@@ -70,7 +71,7 @@ background-color: indianred;
     font-size: 25px;   
     margin-top: -64px;
     z-index: 100;
-    background-color: #69c;
+    background-color: #58016b;
 }
 .nav__responsive-button{
     padding: 6px 20px;
@@ -101,7 +102,7 @@ background-color: indianred;
         height: calc(100vh-64px);
         transition: all 1s;
         z-index: 1;
-        background: lightskyblue;
+        background: #590a79;
         width: 75%;
         padding-top: 27px;
     }
@@ -114,13 +115,91 @@ background-color: indianred;
         text-align: center;
         margin-right: 5px;
         width: 30px;
-        color: #028;
+        color: black;
     }
     .nav__responsive-li a{
-        color: #028;
+        color: black;
         text-decoration: none;
     }
     .nav__responsive-ul:hover > .nav__li-container{
         top: -27px
     }   
+}
+
+/*FORMULARIO*/
+.flex-container{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #444;
+    margin: 50 px 50px;
+    padding: 20px;
+    box-shadow: 1px 6px 8px 0 #040404;  
+}
+.form{
+    min-width: 400px;
+    flex: 1;
+    text-align: center;
+    padding: 30px;
+    order: 5;
+}
+.form__input{
+    width: 100%;
+    padding: 6px;
+    margin: 6px 0;
+    border: none;
+    border-bottom: 3px solid #58016b;
+    background: transparent;  
+    color: white;
+    order: 2;
+}
+.form__input:focus{
+    background: linear-gradient(to left, transparent, #333);/*para hacer degrades*/
+    outline: none;
+    border-bottom: 3px solid #7c03ac;
+}
+.form textarea{
+    min-height: 150px;
+    resize: none; /*para que no se pueda agrandar*/
+}
+.form-img {
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    min-width: 300px;
+    max-width: 400px;
+    order: 2;
+}
+.form-img div{
+    padding: 10px; 
+
+}
+.img-container{
+    margin: auto; /*con esto lo centramos a la imagen*/
+    padding: 20px;
+}
+.img-container div{
+    background-color: #58016b; 
+    border-radius: 50%;
+    text-align: center;
+    padding: 90px;
+}
+.form-img img{
+    width:100%;   
+}
+.form input[type="submit"]{
+    background-color:#58016b;
+    border-bottom: none;
+    padding: 12px;
+}
+.form input[type="submit"]:hover{
+    background-color:#590a79;
+    border-bottom: none;
+    padding: 12px;
+}
+.form input[type="submit"]:focus{
+    background-color:#590a79;
+    border-bottom: none;
+    padding: 12px;
 }
