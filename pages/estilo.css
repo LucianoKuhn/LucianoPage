@@ -76,7 +76,7 @@ body{
 .flex-cuerpo{
 	display: flex;
 	justify-content: space-around;	
-	flex-wrap: wrap;
+
 }
 
 /*SECTOR LINK PÁGINA FACULTAD*/
@@ -113,14 +113,15 @@ outline: 3px dashed white ;
 
 .flex-imagenes__img{
 	height: 200px;	
-	margin-top: 60px;
+	margin-top: 40px;
 }
 
 .imagen_facultad{
-	height: 200px;
+	height: 100px;
+	margin-top: 70px;
 
  }
  .text_facultad__P{
-	 font-size: 20px;
+	 font-size: 15px;
  }
 }
