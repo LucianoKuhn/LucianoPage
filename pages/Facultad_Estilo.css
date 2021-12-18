@@ -1,0 +1,35 @@
+*{
+	font-weight: 100px;
+	font-family:'Otomanopee One', sans-serif;
+}
+
+body{
+	background: #f2e6ff ;
+}
+
+
+/* SECTOR MENU */
+.nav{
+	background:#58016b;
+	margin:-16px;
+}
+.nav__li{
+	display: inline-block;
+	padding: 10px;
+	color: white;	
+}
+.nav__li a{ 
+	color: white;
+	text-decoration: none;
+}
+.nav__li i{
+	box-sizing: border-box;
+	text-align: right;
+	margin-right: 5px;
+}
+.nav__li:hover > a{
+	color: #E678FF;
+}
+.nav__li:hover > i{
+	color: #E678FF;
+}
