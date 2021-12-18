@@ -76,6 +76,7 @@ body{
 .flex-cuerpo{
 	display: flex;
 	justify-content: space-around;	
+	flex-wrap: wrap-reverse;
 
 }
 
@@ -83,7 +84,8 @@ body{
 .imagen_facultad{
 	border: 3px groove black;
 	border-radius: 10px;
-	height: 270px;
+	height: 320px;
+	width: 350px;
 	background: #8F3DA1 ;
 	margin-top: 60px;	
 }
@@ -108,16 +110,26 @@ border-radius: 20px;
 margin-top: -30px;
 outline: 3px dashed white ;
 }
+.flex-imagenes__img2{ /*porche*/
+	height: 500px;
+	border-radius: 20px;
+	margin-top: -30px;
+	outline: 3px dashed white ;
+	}
 
 @media only screen and (max-width: 500px){
 
 .flex-imagenes__img{
-	height: 200px;	
-	margin-top: 40px;
+	height: 250px;	
+	margin-top: 70px;
+}
+.flex-imagenes__img2{
+	display: none;
 }
 
 .imagen_facultad{
-	height: 100px;
+	height: 150px;
+	width: 150px;
 	margin-top: 70px;
 
  }
