@@ -72,13 +72,11 @@ body{
 	display: inline-block;
 }
 
-
-
-
 /*SECTOR TODAS LAS IMAGENES*/
 .flex-cuerpo{
 	display: flex;
 	justify-content: space-around;	
+	flex-wrap: wrap;
 }
 
 /*SECTOR LINK PÁGINA FACULTAD*/
@@ -111,3 +109,18 @@ margin-top: -30px;
 outline: 3px dashed white ;
 }
 
+@media only screen and (max-width: 500px){
+
+.flex-imagenes__img{
+	height: 200px;	
+	margin-top: 60px;
+}
+
+.imagen_facultad{
+	height: 200px;
+
+ }
+ .text_facultad__P{
+	 font-size: 20px;
+ }
+}
