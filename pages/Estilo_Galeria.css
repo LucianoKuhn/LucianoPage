@@ -4,7 +4,7 @@
 }
 body{
     background: radial-gradient(circle, #fff,#bbb);
-    padding: 15px;
+    padding-top: 40px;
     display: flex;
 }
 
@@ -32,6 +32,7 @@ img{
     height: 100%;
     object-fit: cover;
     border-radius: 20px;
+    margin-top: 70px;
 }
 
 img:first-child{
@@ -39,4 +40,22 @@ img:first-child{
     grid-row: 1/span 1;
     border-radius: 29px;
     place-self: center,center;
+    
+}
+
+.flex-galeria{
+    display: flex;
+    justify-content: center;
+}
+.flex-Galeria__div{
+    font-family:'Otomanopee One', sans-serif;;
+	background:black;
+	color:white;
+	font-size: 27px;
+	margin-top:-40px;
+    margin-left:100%;	
+	padding: 0px 100%;
+	text-align:center;
+	box-shadow: 4px 4px 5px 0 #040404;
+	position: fixed;
 }
