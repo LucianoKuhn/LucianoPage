@@ -15,7 +15,7 @@ body{
 }
 .nav__li{
 	display: inline-block;
-	padding: 8px;
+	padding: 6px;
 	color: white;	
 }
 .nav__li a{ 
@@ -33,6 +33,7 @@ body{
 .nav__li:hover > i{
 	color: #E678FF;
 }
+
 
 /*BARRA LUCIANOPAGE*/
 .flex-menufijo{
@@ -72,30 +73,35 @@ body{
 	display: inline-block;
 }
 
-/*SECTOR TODAS LAS IMAGENES*/
-.flex-cuerpo{
+/*SECTOR CAJAS FLEX*/
+.flex-body{
 	display: flex;
-	justify-content: space-around;	
-	flex-wrap: wrap-reverse;
+	justify-content: space-between;
+	flex-wrap: wrap;
 
 }
+.flex-body__imagen_facu{
+	justify-content: center;
+}
 
-/*SECTOR LINK PÁGINA FACULTAD*/
+/*SECTOR IMAGEN DEL CENTRO Y TEXTO FACULTAD*/
 .imagen_facultad{
 	border: 3px groove black;
 	border-radius: 10px;
-	height: 320px;
-	width: 350px;
+	height: 370px;
+	width: 400px;
 	background: #8F3DA1 ;
-	margin-top: 60px;	
+	margin-top: 40px;	
+	object-fit: cover;
 }
 .imagen_facultad:hover{	
 	border: 5px solid #000000;
 	cursor: pointer;
-	}
+}
 	
 .text_facultad__P{
  font-size: 40px;
+ margin-top: -90px;
  font-family: 'Bakbak One', cursive;
  display: block;
  text-align: center;
@@ -103,37 +109,54 @@ body{
  color: transparent;
 }
 
-/*IMAGENES DE LOS COSTADOS*/
-.flex-imagenes__img{ /*porche*/
-height: 500px;
+/*IMAGENES DE LOS COSTADOS (ASTRONAUTAS)*/
+.flex-imagenes__img{ 
+height: 520px;
 border-radius: 20px;
-margin-top: -30px;
-outline: 3px dashed white ;
+margin-top: -15px;
+outline: 3px dashed white;
+object-fit: cover;
+margin-left: 20px;
+
 }
-.flex-imagenes__img2{ /*porche*/
-	height: 500px;
+.flex-imagenes__img2{ 
+	height: 520px;
 	border-radius: 20px;
-	margin-top: -30px;
+	margin-top: -15px;
 	outline: 3px dashed white ;
+	object-fit: cover;
+	margin-right: 20px;
+}
+
+
+/*PARTE RESPONSIVE*/
+@media only screen and (max-width: 500px){
+	.flex-body{
+		justify-content: center;
 	}
 
-@media only screen and (max-width: 500px){
+	.flex-imagenes__img2{
+		display: none;
+	}
 
-.flex-imagenes__img{
-	height: 250px;	
-	margin-top: 70px;
-}
-.flex-imagenes__img2{
-	display: none;
-}
-
-.imagen_facultad{
-	height: 150px;
-	width: 150px;
-	margin-top: 70px;
-
- }
- .text_facultad__P{
-	 font-size: 15px;
- }
+	.flex-imagenes__img{
+		margin-top: 20px;
+		height: 300px;
+		object-fit: cover;
+		width: 300px;
+		
+	}
+	.imagen_facultad{
+		margin-top: 25px;
+		justify-content: center;
+		height: 230px;
+		object-fit: cover;
+		width: 250px;
+	}
+	.text_facultad__P{
+		display: flex;
+		justify-content: center;
+		margin-top: -8px;
+	}
+	
 }
