@@ -95,8 +95,10 @@ body{
 	object-fit: cover;
 }
 .imagen_facultad:hover{	
-	border: 5px solid #000000;
+	border: 4px solid #000000;
 	cursor: pointer;
+	background: #7c348b ;
+	
 }
 	
 .text_facultad__P{
