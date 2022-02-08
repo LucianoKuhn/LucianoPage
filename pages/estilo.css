@@ -5,10 +5,37 @@
 
 body{
 	padding-top: 30px;
-	background: #ddccf1 ;
+	background: #5C2669     ;
 }
 
-/*MENU ESTATICO*/
+/* SECTOR MENU */
+.nav{
+	background:#8F3DA1  ;
+	margin:-8px;
+}
+.nav__li{
+	display: inline-block;
+	padding: 6px;
+	color: white;	
+}
+.nav__li a{ 
+	color: white;
+	text-decoration: none;
+}
+.nav__li i{
+	box-sizing: border-box;
+	text-align: right;
+	margin-right: 5px;
+}
+.nav__li:hover > a{
+	color: #E678FF;
+}
+.nav__li:hover > i{
+	color: #E678FF;
+}
+
+
+/*BARRA LUCIANOPAGE*/
 .flex-menufijo{
 	display: flex;
 	justify-content: center;
@@ -29,14 +56,15 @@ body{
 .flex-bienvenidos__item{
  display: flex;
  flex-wrap: wrap;
- justify-content: center; 	
+ justify-content: center; 
+ 	
 }
 .flex-bienvenidos__item-h2{
 	font-family:'Otomanopee One', sans-serif;;
 	font-size: 18px;
     color: white;
     background: black;
-    margin: 0vh 39.7vw;
+    margin: 1vh 20vw;
     padding: 7px 0px;
     width: 310px;
     text-align: center;
@@ -45,58 +73,92 @@ body{
 	display: inline-block;
 }
 
-
-/*SECTOR DE LAS IMAGENES*/
-.flex-facultad{
+/*SECTOR CAJAS FLEX*/
+.flex-body{
 	display: flex;
-	flex-wrap: wrap;	
-	justify-content: center; 	 	
-}
-.flex-facultad__p{
- margin: 5px 800px;	
- font-size: 25px;
- font-family: 'Bakbak One', cursive;
+	justify-content: space-between;
+	flex-wrap: wrap;
 
 }
-.imagenes__img{
-	display: inline-block;
-	border: 4px groove black;
-	margin-top: 70px;
+.flex-body__imagen_facu{
+	justify-content: center;
+}
+
+/*SECTOR IMAGEN DEL CENTRO Y TEXTO FACULTAD*/
+.imagen_facultad{
+	border: 3px groove black;
 	border-radius: 10px;
-	height: 300px;
-	background: rgb(112, 12, 121);	
+	height: 370px;
+	width: 400px;
+	background: #8F3DA1 ;
+	margin-top: 40px;	
+	object-fit: cover;
+}
+.imagen_facultad:hover{	
+	border: 4px solid #000000;
+	cursor: pointer;
+	background: #7c348b ;
+	
+}
+	
+.text_facultad__P{
+ font-size: 40px;
+ margin-top: -90px;
+ font-family: 'Bakbak One', cursive;
+ display: block;
+ text-align: center;
+ -webkit-text-stroke: 1px white;
+ color: transparent;
 }
 
-.imagenes__img:hover{	
-border: 5px solid #000000;
-cursor: pointer;
+/*IMAGENES DE LOS COSTADOS (ASTRONAUTAS)*/
+.flex-imagenes__img{ 
+height: 520px;
+border-radius: 20px;
+margin-top: -15px;
+outline: 3px dashed white;
+object-fit: cover;
+margin-left: 20px;
 
 }
-
-
-/* SECTOR MENU */
-.nav{
-	background:#58016b;
-	margin:-8px;
-}
-.nav__li{
-	display: inline-block;
-	padding: 8px;
-	color: white;	
-}
-.nav__li a{ 
-	color: white;
-	text-decoration: none;
-}
-.nav__li i{
-	box-sizing: border-box;
-	text-align: right;
-	margin-right: 5px;
-}
-.nav__li:hover > a{
-	color: #E678FF;
-}
-.nav__li:hover > i{
-	color: #E678FF;
+.flex-imagenes__img2{ 
+	height: 520px;
+	border-radius: 20px;
+	margin-top: -15px;
+	outline: 3px dashed white ;
+	object-fit: cover;
+	margin-right: 20px;
 }
 
+
+/*PARTE RESPONSIVE*/
+@media only screen and (max-width: 500px){
+	.flex-body{
+		justify-content: center;
+	}
+
+	.flex-imagenes__img2{
+		display: none;
+	}
+
+	.flex-imagenes__img{
+		margin-top: 20px;
+		height: 300px;
+		object-fit: cover;
+		width: 300px;
+		
+	}
+	.imagen_facultad{
+		margin-top: 25px;
+		justify-content: center;
+		height: 230px;
+		object-fit: cover;
+		width: 250px;
+	}
+	.text_facultad__P{
+		display: flex;
+		justify-content: center;
+		margin-top: -8px;
+	}
+	
+}

@@ -1,0 +1,137 @@
+
+body{
+    background-color: black;
+}
+
+.DivCabecera{
+    display: flex;
+    justify-content: center;
+}
+
+.DivCabecera-MyBlog{
+    position: fixed;
+    background: linear-gradient(to right, #F26D52, #F46648);
+    color: black;
+    font-size: 35px;
+    padding: 8px 100%;
+
+    font-family: 'Kaushan Script', cursive;
+}
+
+.ContenedorPrimero{
+    display: flex;
+    background-color: black; 
+    margin-top: 50px;
+    height: 558px;
+    border: 7px solid #F46648; 
+   
+   }
+
+.Contenedores{
+ display: flex;
+ background-color: black; 
+ margin-top: 10px;
+ height: 558px;
+ border: 7px solid #F46648; 
+
+}
+
+.ContenedorImgs{
+margin-left: 10px;
+margin-top: 10px;
+
+}
+
+.Img1{
+    width: 700px;
+    height: 525px;
+    object-fit: cover;
+}
+
+.Img2 {
+    width: 700px;
+    height: 525px;
+    object-fit: cover;
+}
+
+
+
+.contenedor-form{ 
+justify-content: right;
+margin-left: 10px;
+margin-top: 12px;
+}
+
+.form-textarea{
+    resize: none;
+    font-size: 50px;
+    color: white;
+    border-radius: 10px;
+    border: 2px solid #F46648; 
+    background: linear-gradient(to bottom,#000000, #1C1C1C );
+    font-family: 'Saira Condensed', sans-serif;
+}
+
+
+@media only screen and (max-width: 500px){
+
+    .ContenedorPrimero{
+        display: flex;
+        flex-wrap: wrap;
+        background-color: black; 
+        margin-top: 50px;
+        height: 590px;
+        width: 385px;
+        border: 7px solid #F46648; 
+       
+       }
+       
+    .Contenedores{
+        display: flex;
+        flex-wrap: wrap;
+        background-color: black; 
+        margin-top: 20px;
+        height: 590px;
+        width: 385px;
+        border: 7px solid #F46648; 
+       
+       }
+ 
+  
+    
+    .ContenedorImgs{
+    margin-left: 5px;
+    margin-top: 5px;
+    
+    }
+    
+    .Img1{
+        width: 361px;
+        height: 225px;
+        object-fit: cover;
+    }
+    
+    .Img2{
+        width: 361px;
+        height: 225px;
+        object-fit: cover;
+    }
+       
+    .contenedor-form{ 
+    margin-left: 3px;
+    margin-top: 0px;
+    }
+    
+    .form-textarea{
+        height: 340px;
+        width: 365px;
+        resize: none;
+        font-size: 30px;
+        color: white;
+        border-radius: 0px;
+        border: 2px solid #F46648; 
+        background: linear-gradient(to bottom,#000000, #1C1C1C );
+        font-family: 'Saira Condensed', sans-serif;
+    }
+}
+}
