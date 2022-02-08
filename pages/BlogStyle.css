@@ -81,7 +81,7 @@ margin-top: 12px;
         background-color: black; 
         margin-top: 50px;
         height: 590px;
-        width: 385px;
+        width: 414px;
         border: 7px solid #F46648; 
        
        }
@@ -92,7 +92,7 @@ margin-top: 12px;
         background-color: black; 
         margin-top: 20px;
         height: 590px;
-        width: 385px;
+        width: 414px;
         border: 7px solid #F46648; 
        
        }
@@ -106,13 +106,13 @@ margin-top: 12px;
     }
     
     .Img1{
-        width: 361px;
+        width: 390px;
         height: 225px;
         object-fit: cover;
     }
     
     .Img2{
-        width: 361px;
+        width: 390px;
         height: 225px;
         object-fit: cover;
     }
@@ -124,7 +124,7 @@ margin-top: 12px;
     
     .form-textarea{
         height: 340px;
-        width: 365px;
+        width: 394px;
         resize: none;
         font-size: 30px;
         color: white;
