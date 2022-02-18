@@ -31,6 +31,15 @@ body{
     border: 7px solid #F46648; 
 }
 
+/* COUPES */
+.Coupe_1{
+    display: flex;
+    background-color: black; 
+    margin-top: 6px;
+    height: 558px;
+    border: 7px solid #F46648; 
+}
+
 
 
 
@@ -50,7 +59,6 @@ body{
     display: flex;
     margin-top: 20px;
 }
-
 
 
 .ContenedorImgs{
@@ -89,7 +97,7 @@ margin-top: 12px;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    justify-items: center;
+
     background: linear-gradient(to left, #F49148, #F85D3E);
     font-family: 'Saira Condensed', sans-serif;
 }
@@ -147,6 +155,16 @@ margin-top: 12px;
         width: 414px;
         border: 7px solid #F46648;       
     }
+
+    .Coupe_1{
+        display: flex;
+        flex-wrap: wrap;
+        background-color: black; 
+        margin-top: 5px;
+        height: 590px;
+        width: 414px;
+        border: 7px solid #F46648;       
+     }
      
     .ContenedorImgs{
     margin-left: 5px;
@@ -179,22 +197,21 @@ margin-top: 12px;
     .Div-selectorAutos{
         margin-top: 40px;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
         flex-wrap: wrap;
-        justify-items: center;
-        background: linear-gradient(to left, #F49148, #F85D3E);
+        background: linear-gradient(to left, #000000, #171717);
         font-family: 'Saira Condensed', sans-serif;
     }
     
     .Div-selectorAutos_h1{
-        color: black;
+        color: white;
         margin-left: 0px;
         font-size: 40px;
     }
     
     .Div-selectorAutos_select{
         margin-right: 0px;
-        margin-top: 0px; 
+        margin-top: -20px; 
         width: 250px;
         height: 40px;
         font-size: 25px;
