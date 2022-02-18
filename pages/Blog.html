@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,60 +21,74 @@
     <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600&display=swap" rel="stylesheet">
 
 </head>
+
 <body>
-  <header>
-      <div class="DivCabecera">
-          <div class="DivCabecera-MyBlog">AutosConcepción</div>
-      </div>
-  </header>
-
-  <section>
-
-
-
-    <div class="ContenedorPrimero">
-
-        <div class="ContenedorImgs">
-                <img class = 'Img1' src="../img/BlogImg/Auto.jpg">
+    <header>
+        <div class="DivCabecera">
+            <div class="DivCabecera-MyBlog">AutosConcepción</div>
         </div>
 
-        <div class="contenedor-form">
-            <form name="form" class='form1'>              
-                    <textarea name="text_area" class="form-textarea" readonly="true" cols="28" rows="9"> 
-                       
-                    </textarea>  
-                                 
-            </form>
-            <script src="BlogJS.js">
-               
-            </script> 
-        </div>
-                
-    </div>
-    
-    <div class="Contenedores">
-
-        <div class="ContenedorImgs">
-                <img class = 'Img2' src="../img/BlogImg/raptor.png">
+        <div class="Div-selectorAutos">
+            <h1 class="Div-selectorAutos_h1">Filtrar por carrocería: </h1>
+            <select class='Div-selectorAutos_select' name="selectorAutos" onchange="FiltrarCarroceria()">
+                <option value='aa' selected="true" disabled>Seleccione la carrocería</option>
+                <option value="Todos">Mostrar Todos</option>
+                <option value="Pick-Up">Pick-Up</option>
+                <option value="Sedan">Sedan</option>
+            </select>
         </div>
 
-        <div class="contenedor-form">
-            <form name="form2" class='form1'>              
-                    <textarea name="text_area2" class="form-textarea" readonly="true" cols="28" rows="9"> 
-                       
-                    </textarea>  
-                                 
-            </form>
-            <script src="BlogJS.js">
-               
-            </script> 
+    </header>
+
+    <section>
+
+
+        <!-- CONTENEDOR DE LOS SEDANS -->
+        <div class="ContenedorSedan">
+
+            <div class="Sendan_1">
+
+
+                <div class="ContenedorImgs">
+                    <img class='Imgs' src="../img/BlogImg/Auto.jpg">
+                </div>
+                <div class="contenedor-form">
+                    <form name="form" class='form1'>
+                        <textarea name="text_area" class="form-textarea" readonly="true" cols="28" rows="9"> </textarea>
+                    </form>
+                    <script src="BlogJS.js"></script>
+                </div>
+            </div>
         </div>
-                
-    </div>
 
-    
 
-  </section>
+        <!-- CONTENEDOR DE LAS PICK-UPS -->
+        <div class="ContenedorPickUp">
+
+            <div class="Pick-Up_1">
+                <div class="ContenedorImgs">
+                    <img class='Imgs' src="../img/BlogImg/raptor.png">
+                </div>
+                <div class="contenedor-form">
+                    <form name="form2" class='form1'>
+                        <textarea name="text_area2" class="form-textarea" readonly="true" cols="28" rows="9"></textarea>
+                    </form>
+                    <script src="BlogJS.js"></script>
+                </div>
+            </div>
+
+            <div class="Pick-Up_2">
+                <div class="ContenedorImgs">
+                    <img class='Imgs' src="../img/BlogImg/raptor2.jpg">
+                </div>
+                <div class="contenedor-form">
+                    <form name="form3" class='form1'>
+                        <textarea name="text_area3" class="form-textarea" readonly="true" cols="28" rows="9"></textarea>
+                    </form>
+                    <script src="BlogJS.js"></script>
+                </div>
+            </div>
+    </section>
 
 </body>
 
