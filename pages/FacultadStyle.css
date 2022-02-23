@@ -70,7 +70,6 @@ body{
 }
 
 .grid-container{
-
 	display: grid;
 	grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;	
@@ -128,7 +127,10 @@ body{
 	background-color: #128FCA;
 	font-family: 'Staatliches', cursive;
 }
-
+.grid-item:nth-child(31){
+	background-color: #128FCA;
+	font-family: 'Staatliches', cursive;
+}
 
 
 
@@ -190,6 +192,11 @@ body{
         font-size: 18px;
     }
     .grid-item:nth-child(25){
+        background-color: #128FCA;
+        font-family: 'Staatliches', cursive;
+        font-size: 18px;
+    }
+    .grid-item:nth-child(31){
         background-color: #128FCA;
         font-family: 'Staatliches', cursive;
         font-size: 18px;
