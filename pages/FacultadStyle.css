@@ -132,7 +132,17 @@ body{
 	font-family: 'Staatliches', cursive;
 }
 
-
+.text-facultad{
+    margin-top: -4px;
+    width: 685px;
+    height: 44px;
+    resize: none;
+    background: #FF7957;
+    border: 4px solid black;
+    font-family: 'Staatliches', cursive;
+    font-size: 30px;
+    text-align: center;
+}
 
 
 
@@ -200,5 +210,11 @@ body{
         background-color: #128FCA;
         font-family: 'Staatliches', cursive;
         font-size: 18px;
+    }
+
+    .text-facultad{
+        font-size: 25px;
+        width: 375px;
+        height: 70px;
     }
 }
