@@ -1,0 +1,220 @@
+body{
+    background: #F0CCF6;
+}
+
+/* CARTEL FACULTAD FIJO */
+.div-facultad_contenedor{
+    display: flex;
+    justify-content: center; 
+}
+
+.div-facultad_texto{
+   color: white;
+   background-color: black;
+   padding: 5px 100%;
+   font-size: 30px;
+   text-align: center;
+   font-family:'Otomanopee One', sans-serif;
+   box-shadow: 4px 4px 5px 0 #040404;
+   position: fixed;
+} 
+
+ /* SECTOR MENU */
+.nav-menu{
+	margin-top:49px;
+	background-color: #58016b;
+    padding: 4px 0px;
+}
+
+.nav_li{
+    display: inline-block;
+	padding: 3px;
+    color: white;
+    margin-right: 5px;
+    margin-left: 8px;
+}
+
+.nav_li i {
+    margin-right: 3px;
+}
+
+.nav_li a {
+    color: white;
+    text-decoration: none;
+    font-family:'Otomanopee One', sans-serif;
+    font-size: 14px;
+}
+
+.nav_li:hover > a{
+	color: #E678FF;
+}
+.nav_li:hover > i{
+	color: #E678FF;
+}
+
+/* HORARIOS DE LA FACULTAD */
+.Div-FacuHorario_text{
+    display: flex;
+    
+    justify-content: center;
+    background-color: black;
+    padding: 4px 0;
+}
+
+.Div-FacuHorario_text{
+	font-size: 40px;
+	font-family: 'Bubblegum Sans', cursive;
+	background: #23B4FD;
+	box-shadow: 0 5px 10px 1px black;
+	outline: 3px solid black;
+}
+
+.grid-container{
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;	
+	border: 2px solid black;
+	text-align: center;
+	background: linear-gradient(to left, #23C8FD, #02C6FF );
+}
+
+.grid-item{
+	border: 2px solid black;
+	font-family: 'Patrick Hand', cursive;
+	font-size: 27px;
+}
+
+
+.grid-item:nth-child(1){
+	background-color: #128FCA;
+	font-family: 'Staatliches', cursive;
+
+}
+.grid-item:nth-child(2){
+	background-color: #128FCA;
+	font-family: 'Staatliches', cursive;
+    
+}
+.grid-item:nth-child(3){
+	background-color: #128FCA;
+	font-family: 'Staatliches', cursive;
+}
+.grid-item:nth-child(4){
+	background-color: #128FCA;
+	font-family: 'Staatliches', cursive;
+}
+.grid-item:nth-child(5){
+	background-color: #128FCA;
+	font-family: 'Staatliches', cursive;
+}
+.grid-item:nth-child(6){
+	background-color: #128FCA;
+	font-family: 'Staatliches', cursive;
+}
+.grid-item:nth-child(7){
+	background-color: #128FCA;
+	font-family: 'Staatliches', cursive;
+}
+.grid-item:nth-child(13){
+	background-color: #128FCA;
+	font-family: 'Staatliches', cursive;
+}
+.grid-item:nth-child(19){
+	background-color: #128FCA;
+	font-family: 'Staatliches', cursive;
+}
+.grid-item:nth-child(25){
+	background-color: #128FCA;
+	font-family: 'Staatliches', cursive;
+}
+.grid-item:nth-child(31){
+	background-color: #128FCA;
+	font-family: 'Staatliches', cursive;
+}
+
+.text-facultad{
+    margin-top: -4px;
+    width: 685px;
+    height: 44px;
+    resize: none;
+    background: #FF7957;
+    border: 4px solid black;
+    font-family: 'Staatliches', cursive;
+    font-size: 30px;
+    text-align: center;
+}
+
+
+
+
+
+@media only screen and (max-width: 500px){
+    .nav_li a { 
+        font-size: 9px;
+    }
+
+    .grid-item{
+        border: 2px solid black;
+        font-family: 'Patrick Hand', cursive;
+        font-size: 21px;
+        
+    }
+
+    .grid-item:nth-child(2){
+        background-color: #128FCA;
+        font-family: 'Staatliches', cursive;
+        font-size: 18px;
+       
+    }
+    .grid-item:nth-child(3){
+        background-color: #128FCA;
+        font-family: 'Staatliches', cursive;
+        font-size: 18px;
+    }
+    .grid-item:nth-child(4){
+        background-color: #128FCA;
+        font-family: 'Staatliches', cursive;
+        font-size: 18px;
+    }
+    .grid-item:nth-child(5){
+        background-color: #128FCA;
+        font-family: 'Staatliches', cursive;
+        font-size: 18px;
+    }
+    .grid-item:nth-child(6){
+        background-color: #128FCA;
+        font-family: 'Staatliches', cursive;
+        font-size: 18px;
+    }
+    .grid-item:nth-child(7){
+        background-color: #128FCA;
+        font-family: 'Staatliches', cursive;
+        font-size: 18px;
+    }
+    .grid-item:nth-child(13){
+        background-color: #128FCA;
+        font-family: 'Staatliches', cursive;
+        font-size: 18px;
+    }
+    .grid-item:nth-child(19){
+        background-color: #128FCA;
+        font-family: 'Staatliches', cursive;
+        font-size: 18px;
+    }
+    .grid-item:nth-child(25){
+        background-color: #128FCA;
+        font-family: 'Staatliches', cursive;
+        font-size: 18px;
+    }
+    .grid-item:nth-child(31){
+        background-color: #128FCA;
+        font-family: 'Staatliches', cursive;
+        font-size: 18px;
+    }
+
+    .text-facultad{
+        font-size: 25px;
+        width: 375px;
+        height: 70px;
+    }
+}
