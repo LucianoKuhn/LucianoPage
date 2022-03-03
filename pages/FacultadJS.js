@@ -135,9 +135,9 @@ switch (diaSemana){
             document.querySelector('.grid-item:nth-child(32)').style.backgroundColor  = '#FF3402';  
            
             if (horaDefinitiva >= inicioSintaxis){           
-                document.form_materia.text_materia.value ="Terminas de cursar Física en " +  CalcularHora(finSintaxis).substring(1,2) + " horas y " + CalcularHora(finSintaxis).substring(3,5) + " minutos."; 
+                document.form_materia.text_materia.value ="Terminas de cursar Sintaxis en " +  CalcularHora(finSintaxis).substring(1,2) + " horas y " + CalcularHora(finSintaxis).substring(3,5) + " minutos."; 
                 if (CalcularHora(finSintaxis).substring(0,2) == "00"){
-                    document.form_materia.text_materia.value ="Terminas de cursar Física en " + CalcularHora(finSintaxis).substring(3,5) + " minutos."; 
+                    document.form_materia.text_materia.value ="Terminas de cursar Sintaxis en " + CalcularHora(finSintaxis).substring(3,5) + " minutos."; 
                  }
             } else {
              if (horaDefinitiva.substring(0,1) == "0"){
