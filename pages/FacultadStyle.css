@@ -132,9 +132,14 @@ body{
 	font-family: 'Staatliches', cursive;
 }
 
+.cuadros_texto{
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .text-facultad{
     margin-top: -4px;
-    width: 685px;
+    width: 683px;
     height: 44px;
     resize: none;
     background: #FF7957;
@@ -144,11 +149,26 @@ body{
     text-align: center;
 }
 
-
-
+.text-horario{
+    margin-top: -4px;
+    width: 683px;
+    height: 44px;
+    resize: none;
+    background: #F6E005;
+    border: 4px solid black;
+    font-family: 'Staatliches', cursive;
+    font-size: 30px;
+    text-align: center;
+}
 
 
 @media only screen and (max-width: 500px){
+
+
+    .grid-container{
+        grid-template-rows: 30px 1fr 1fr 1fr 1fr;
+    }
+
     .nav_li a { 
         font-size: 9px;
     }
@@ -214,7 +234,14 @@ body{
 
     .text-facultad{
         font-size: 25px;
-        width: 375px;
+        width: 414px;
         height: 70px;
+        margin-top: -10px;
+    }
+    .text-horario{
+        font-size: 35px;
+        width: 414px;
+        height: 50px;
+     
     }
 }

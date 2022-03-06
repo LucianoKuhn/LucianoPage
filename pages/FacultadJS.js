@@ -72,6 +72,33 @@ function CalcularHora (horario){
     return faltante;  
 }
 
+switch(diaSemana){
+   case 'Mon':
+      document.form_horario.text_horario.value ="Son las " + horaDefinitiva + ' de un Lunes'; 
+   break;
+   case 'Tue':
+      document.form_horario.text_horario.value ="Son las " + horaDefinitiva + ' de un Martes';
+   break;
+   case 'Wed':
+      document.form_horario.text_horario.value ="Son las " + horaDefinitiva + ' de un Miércoles';
+   break;
+   case 'Thu':
+      document.form_horario.text_horario.value ="Son las " + horaDefinitiva + ' de un Jueves';
+   break;
+   case 'Fri':
+      document.form_horario.text_horario.value ="Son las " + horaDefinitiva + ' de un Viernes';
+   break;
+   case 'Sat':
+      document.form_horario.text_horario.value =horaDefinitiva + ' - Sábado';
+   break;
+   case 'Sun':
+      document.form_horario.text_horario.value ="Son las " + horaDefinitiva + ' de un Domingo';
+   break;
+
+
+
+
+}
 
 switch (diaSemana){
 
@@ -85,8 +112,8 @@ switch (diaSemana){
 
        //HORARIO ALGEBRA  
             
-       if (horaDefinitiva >= inicioDelDia && horaDefinitiva <= finAlgebra) {
-            
+       if (horaDefinitiva >= inicioDelDia && horaDefinitiva <= finAlgebra) { 
+
         document.querySelector('.grid-item:nth-child(6)').style.backgroundColor  = '#FF3402';
         document.querySelector('.grid-item:nth-child(7)').style.backgroundColor  = '#FF3402';  
         
@@ -109,6 +136,7 @@ switch (diaSemana){
         
     //HORARIO FISICA    
     } else if (horaDefinitiva >= inicioDelDia && horaDefinitiva <= finFisicaLun) {
+
             document.querySelector('.grid-item:nth-child(14)').style.backgroundColor  = '#FF3402';
             document.querySelector('.grid-item:nth-child(13)').style.backgroundColor  = '#FF3402';  
            
@@ -118,6 +146,7 @@ switch (diaSemana){
                     document.form_materia.text_materia.value ="Terminas de cursar Física en " + CalcularHora(finFisicaLun).substring(3,5) + " minutos."; 
                  }
             } else {
+
              if (horaDefinitiva.substring(0,1) == "0"){
        
                 document.form_materia.text_materia.value ="Cursas Física en " +  CalcularHora(inicioFisicaLun).substring(0,2) + " horas y " +CalcularHora(inicioFisicaLun).substring(3,5) + " minutos.";    
@@ -361,7 +390,7 @@ switch (diaSemana){
      break;
 
      default:
-        document.form_materia.text_materia.value ="Es momento de descansar :)"; 
+        document.form_materia.text_materia.value ="Es momento de descansar, o estudiar... :)"; 
      break;
 }
 
