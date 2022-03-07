@@ -134,7 +134,6 @@ body{
 
 .cuadros_texto{
     display: flex;
-    flex-wrap: wrap;
 }
 
 .text-facultad{
@@ -251,5 +250,8 @@ body{
         width: 414px;
         height: 50px;
      
+    }
+    .cuadros_texto{
+        flex-wrap: wrap;
     }
 }
