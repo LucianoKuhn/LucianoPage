@@ -4,7 +4,7 @@ var fecha = hoy.toDateString();
 var hora = hoy.getHours() + ':' + hoy.getMinutes() + ':' + hoy.getSeconds();
 var diaSemana = fecha.substring(0,3);
 
-var inicioDelDia = "06:0:00"
+var inicioDelDia = "00:00:00"
 
 //VARIABLES MATERIAS QUE SIEMPRE INICIAN/TERMINAN A LA MISMA HORA
 var inicioAlgebra="08:00:00", inicioSintaxis="19:00:00", inicioAnalisis="20:45:00";
@@ -72,6 +72,8 @@ function CalcularHora (horario){
     return faltante;  
 }
 
+
+
 switch(diaSemana){
    case 'Mon':
       document.form_horario.text_horario.value =horaDefinitiva + ' - Lunes';
@@ -94,11 +96,9 @@ switch(diaSemana){
    case 'Sun':
       document.form_horario.text_horario.value =horaDefinitiva + ' - Domingo';
    break;
-
-
-
-
 }
+
+
 
 switch (diaSemana){
 
@@ -114,13 +114,13 @@ switch (diaSemana){
             
        if (horaDefinitiva >= inicioDelDia && horaDefinitiva <= finAlgebra) { 
 
-        document.querySelector('.grid-item:nth-child(6)').style.backgroundColor  = '#FF3402';
+        document.querySelector('.grid-item:nth-child(8)').style.backgroundColor  = '#FF3402';
         document.querySelector('.grid-item:nth-child(7)').style.backgroundColor  = '#FF3402';  
         
         if (horaDefinitiva >= inicioAlgebra){           
-            document.form_materia.text_materia.value ="Terminas de cursar Álgebra en " +  CalcularHora(finAlgebra).substring(0,1) + " horas y " + CalcularHora(finAlgebra).substring(2,5) + " minutos."; 
-            if (CalcularHora(finAlgebra).substring(0,1) == "00"){
-                document.form_materia.text_materia.value ="Terminas de cursar Álgebra en " + CalcularHora(finAlgebra).substring(2,5) + " minutos."; 
+            document.form_materia.text_materia.value ="Terminas de cursar Álgebra en " +  CalcularHora(finAlgebra).substring(1,2) + " horas y " + CalcularHora(finAlgebra).substring(3,5) + " minutos."; 
+            if (CalcularHora(finAlgebra).substring(0,2) == "00"){
+                document.form_materia.text_materia.value ="Terminas de cursar Álgebra en " + CalcularHora(finAlgebra).substring(3,5) + " minutos."; 
              }
         } else {
          if (horaDefinitiva.substring(0,1) == "0"){
@@ -307,27 +307,27 @@ switch (diaSemana){
 
         //HORARIO ALGEBRA 
         
-        if (horaDefinitiva >= inicioDelDia && horaDefinitiva <= finAlgebra) {
-            
-            document.querySelector('.grid-item:nth-child(11)').style.backgroundColor  = '#FF3402';
-            document.querySelector('.grid-item:nth-child(7)').style.backgroundColor  = '#FF3402';  
-            
-            if (horaDefinitiva >= inicioAlgebra){           
-                document.form_materia.text_materia.value ="Terminas de cursar Álgebra en " +  CalcularHora(finAlgebra).substring(0,1) + " horas y " + CalcularHora(finAlgebra).substring(2,5) + " minutos."; 
-                if (CalcularHora(finAlgebra).substring(0,1) == "00"){
-                    document.form_materia.text_materia.value ="Terminas de cursar Álgebra en " + CalcularHora(finAlgebra).substring(2,5) + " minutos."; 
-                 }
-            } else {
-             if (horaDefinitiva.substring(0,1) == "0"){
-            
-                document.form_materia.text_materia.value ="Cursas Álgebra en " +  CalcularHora(inicioAlgebra).substring(1,2) + " horas y " +CalcularHora(inicioAlgebra).substring(3,5) + " minutos.";    
-             } else {
-                document.form_materia.text_materia.value ="Cursas Álgebra en " +  CalcularHora(inicioAlgebra).substring(0,2) + " horas y " + CalcularHora(inicioAlgebra).substring(3,5) + " minutos.";   
-             }     
-             if (CalcularHora(inicioAlgebra).substring(0,2) == "00"){
-                document.form_materia.text_materia.value ="Cursas Álgebra en " + CalcularHora(inicioAlgebra).substring(3,5) + " minutos."; 
-             }
-           }   
+        if (horaDefinitiva >= inicioDelDia && horaDefinitiva <= finAlgebra) { 
+
+         document.querySelector('.grid-item:nth-child(11)').style.backgroundColor  = '#FF3402';
+         document.querySelector('.grid-item:nth-child(7)').style.backgroundColor  = '#FF3402';  
+         
+         if (horaDefinitiva >= inicioAlgebra){           
+             document.form_materia.text_materia.value ="Terminas de cursar Álgebra en " +  CalcularHora(finAlgebra).substring(1,2) + " horas y " + CalcularHora(finAlgebra).substring(3,5) + " minutos."; 
+             if (CalcularHora(finAlgebra).substring(0,2) == "00"){
+                 document.form_materia.text_materia.value ="Terminas de cursar Álgebra en " + CalcularHora(finAlgebra).substring(3,5) + " minutos."; 
+              }
+         } else {
+          if (horaDefinitiva.substring(0,1) == "0"){
+         
+             document.form_materia.text_materia.value ="Cursas Álgebra en " +  CalcularHora(inicioAlgebra).substring(1,2) + " horas y " +CalcularHora(inicioAlgebra).substring(3,5) + " minutos.";    
+          } else {
+             document.form_materia.text_materia.value ="Cursas Álgebra en " +  CalcularHora(inicioAlgebra).substring(0,2) + " horas y " + CalcularHora(inicioAlgebra).substring(3,5) + " minutos.";   
+          }     
+          if (CalcularHora(inicioAlgebra).substring(0,2) == "00"){
+             document.form_materia.text_materia.value ="Cursas Álgebra en " + CalcularHora(inicioAlgebra).substring(3,5) + " minutos."; 
+          }
+        } 
         //HORARIO FISICA
         
         } else {
