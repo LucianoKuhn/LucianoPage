@@ -74,25 +74,25 @@ function CalcularHora (horario){
 
 switch(diaSemana){
    case 'Mon':
-      document.form_horario.text_horario.value ="Son las " + horaDefinitiva + ' de un Lunes'; 
+      document.form_horario.text_horario.value =horaDefinitiva + ' - Lunes';
    break;
    case 'Tue':
-      document.form_horario.text_horario.value ="Son las " + horaDefinitiva + ' de un Martes';
+      document.form_horario.text_horario.value =horaDefinitiva + ' - Martes';
    break;
    case 'Wed':
-      document.form_horario.text_horario.value ="Son las " + horaDefinitiva + ' de un Miércoles';
+      document.form_horario.text_horario.value =horaDefinitiva + ' - Miércoles';
    break;
    case 'Thu':
-      document.form_horario.text_horario.value ="Son las " + horaDefinitiva + ' de un Jueves';
+      document.form_horario.text_horario.value =horaDefinitiva + ' - Jueves';
    break;
    case 'Fri':
-      document.form_horario.text_horario.value ="Son las " + horaDefinitiva + ' de un Viernes';
+      document.form_horario.text_horario.value =horaDefinitiva + ' - Viernes';
    break;
    case 'Sat':
       document.form_horario.text_horario.value =horaDefinitiva + ' - Sábado';
    break;
    case 'Sun':
-      document.form_horario.text_horario.value ="Son las " + horaDefinitiva + ' de un Domingo';
+      document.form_horario.text_horario.value =horaDefinitiva + ' - Domingo';
    break;
 
 
