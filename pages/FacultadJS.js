@@ -7,7 +7,7 @@ var diaSemana = fecha.substring(0,3);
 var inicioDelDia = "00:00:00"
 
 //VARIABLES MATERIAS QUE SIEMPRE INICIAN/TERMINAN A LA MISMA HORA
-var inicioAlgebra="08:00:00", inicioSintaxis="19:00:00", inicioAnalisis="20:45:00";
+var inicioAlgebra="08:00:00", inicioSintaxis="20:45:00", inicioAnalisis="19:00:00";
 var finAlgebra="12:15:00", finSintaxis="24:00:00", finAnalisis="24:00:00";
 
 //VARIABLES MATERIAS LUNES
@@ -17,7 +17,7 @@ inicioFisicaLun="18:15:00", finFisicaLun="20:30:00";
 inicioFisicaMar="16:30:00", finFisicaMar="19:00:00";  
 
 //VARIABLES MATERIAS MIERCOLES
-inicioInglesMie="16:00:00", finInglesMie="17:00:00";  
+inicioInglesMie="15:00:00", finInglesMie="16:00:00";  
 
 //VARIABLES MATERIAS JUEVES
 inicioFisicaJue="19:00:00", finFisicaJue="22:15:00";  
@@ -309,7 +309,7 @@ switch (diaSemana){
         
         if (horaDefinitiva >= inicioDelDia && horaDefinitiva <= finAlgebra) { 
 
-         document.querySelector('.grid-item:nth-child(11)').style.backgroundColor  = '#FF3402';
+         document.querySelector('.grid-item:nth-child(11 )').style.backgroundColor  = '#FF3402';
          document.querySelector('.grid-item:nth-child(7)').style.backgroundColor  = '#FF3402';  
          
          if (horaDefinitiva >= inicioAlgebra){           
