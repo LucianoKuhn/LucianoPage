@@ -332,6 +332,8 @@ switch (diaSemana){
                 document.form_materia.text_materia.value ="Cursas Ingles en " + CalcularHora(inicioInglesVie).substring(3,5) + " minutos."; 
              }
            }   
+        } else {
+         document.form_materia.text_materia.value ="Es momento de descansar, o estudiar... :)";
         }
      break;
 
