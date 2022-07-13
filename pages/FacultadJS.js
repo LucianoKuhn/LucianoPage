@@ -159,6 +159,7 @@ switch (diaSemana){
          document.querySelector('.grid-item:nth-child(9)').style.backgroundColor  = '#FF7957';
          document.querySelector('.grid-item:nth-child(15)').style.backgroundColor  = '#FF7957';
          document.querySelector('.grid-item:nth-child(21)').style.backgroundColor  = '#FF7957';
+         document.querySelector('.grid-item:nth-child(27)').style.backgroundColor  = '#FF7957';
 
          if (horaDefinitiva >= inicioDelDia && horaDefinitiva <= finAlgebra) {
 
