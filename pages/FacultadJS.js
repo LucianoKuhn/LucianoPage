@@ -3,33 +3,28 @@ var hoy = new Date();
 var fecha = hoy.toDateString();
 var hora = hoy.getHours() + ':' + hoy.getMinutes() + ':' + hoy.getSeconds();
 var diaSemana = fecha.substring(0,3);
-
+var segundosActual = hoy.getSeconds(); 
 var inicioDelDia = "00:00:00"
 
 //VARIABLES MATERIAS QUE SIEMPRE INICIAN/TERMINAN A LA MISMA HORA
-var inicioSintaxis="20:45:00", inicioAnalisis="19:00:00";
-var finSintaxis="24:00:00", finAnalisis="24:00:00";
+var inicioParadigmas="20:45:00", inicioAnalisis="19:00:00", inicioAlgebra='08:00:00', inicioAnalisis1='08:00:00';
+var finParadigmas="23:45:00", finAnalisis="24:00:00", finAlgebra='12:15:00', finAnalisis1='12:15:00';
+
+
+//VARIABLES DE MATERIAS CON HORARIOS QUE CAMBIAN (EN 2DO CUATRIMESTRE, 2DO AÑO NO HAY NINGUNO)
 
 //VARIABLES MATERIAS LUNES
-inicioFisicaLun="18:15:00", finFisicaLun="20:30:00";  
 
 //VARIABLES MATERIAS MARTES
-inicioFisicaMar="16:30:00", finFisicaMar="19:00:00";  
 
 //VARIABLES MATERIAS MIERCOLES
-inicioInglesMie="15:00:00", finInglesMie="16:00:00";  
 
 //VARIABLES MATERIAS JUEVES
-inicioFisicaJue="19:00:00", finFisicaJue="22:15:00";  
 
 //VARIABLES MATERIAS VIERNES
-inicioInglesVie="17:30:00", finInglesVie="18:30:00";  
-
 
 
 //ESTO LLENA CON 0 LOS CAMPOS SIMPLES DE LA HORA
-
-
 function arreglarHora (pasarHora){
     var horaArreglada;
 
@@ -48,8 +43,10 @@ function arreglarHora (pasarHora){
             horaArreglada = ("0"+pasarHora.substring(0,1)+":"+ "0"+pasarHora.substring(2,3));          
         }   
     }
+
     return horaArreglada;
 }
+
 
 var horaDefinitiva = arreglarHora(hora);
 
@@ -68,9 +65,9 @@ function CalcularHora (horario){
     var faltante = HoraFaltante +":"+ minFaltante;
 
     faltante = arreglarHora(faltante);
-  
     return faltante;  
 }
+
 
 
 
@@ -103,55 +100,54 @@ switch(diaSemana){
 switch (diaSemana){
 
      case 'Mon': //LUNES
+
          document.querySelector('.grid-item:nth-child(2)').style.backgroundColor  = '#FF3402';     
          document.querySelector('.grid-item:nth-child(8)').style.backgroundColor  = '#FF7957';
          document.querySelector('.grid-item:nth-child(14)').style.backgroundColor  = '#FF7957';
          document.querySelector('.grid-item:nth-child(20)').style.backgroundColor  = '#FF7957';
          document.querySelector('.grid-item:nth-child(26)').style.backgroundColor  = '#FF7957';
  
-    //HORARIO FISICA    
-      if (horaDefinitiva >= inicioDelDia && horaDefinitiva <= finFisicaLun) {
+    //HORARIO ANALISIS 1    
+      if (horaDefinitiva >= inicioDelDia && horaDefinitiva <= finAnalisis1) {
 
-            document.querySelector('.grid-item:nth-child(8)').style.backgroundColor  = '#FF3402';
-            document.querySelector('.grid-item:nth-child(7)').style.backgroundColor  = '#FF3402';  
+            document.querySelector('.grid-item:nth-child(13)').style.backgroundColor  = '#FF3402';
+            document.querySelector('.grid-item:nth-child(14)').style.backgroundColor  = '#FF3402';  
            
-            if (horaDefinitiva >= inicioFisicaLun){           
-                document.form_materia.text_materia.value ="Terminas de cursar Física en " +  CalcularHora(finFisicaLun).substring(1,2) + " horas y " + CalcularHora(finFisicaLun).substring(3,5) + " minutos."; 
-                if (CalcularHora(finFisicaLun).substring(0,2) == "00"){
-                    document.form_materia.text_materia.value ="Terminas de cursar Física en " + CalcularHora(finFisicaLun).substring(3,5) + " minutos."; 
+            if (horaDefinitiva >= inicioAnalisis1){           
+                document.form_materia.text_materia.value ="Terminas de cursar Analisis Mat. en " +  CalcularHora(finAnalisis1).substring(1,2) + " horas y " + CalcularHora(finAnalisis1).substring(3,5) + " minutos."; 
+                if (CalcularHora(finAnalisis1).substring(0,2) == "00"){
+                    document.form_materia.text_materia.value ="Terminas de cursar Analisis Mat. en " + CalcularHora(finAnalisis1).substring(3,5) + " minutos."; 
                  }
             } else {
 
              if (horaDefinitiva.substring(0,1) == "0"){
        
-                document.form_materia.text_materia.value ="Cursas Física en " +  CalcularHora(inicioFisicaLun).substring(0,2) + " horas y " +CalcularHora(inicioFisicaLun).substring(3,5) + " minutos.";    
-             } else {
-                document.form_materia.text_materia.value ="Cursas Física en " +  CalcularHora(inicioFisicaLun).substring(1,2) + " horas y " + CalcularHora(inicioFisicaLun).substring(3,5) + " minutos.";   
-             }     
-             if (CalcularHora(inicioFisicaLun).substring(0,2) == "00"){
-                document.form_materia.text_materia.value ="Cursas Física en " + CalcularHora(inicioFisicaLun).substring(3,5) + " minutos."; 
+                document.form_materia.text_materia.value ="Cursas Analisis Mat. en " +  CalcularHora(inicioAnalisis1).substring(1,2) + " horas y " +CalcularHora(inicioAnalisis1).substring(3,5) + " minutos.";    
+             }    
+             if (CalcularHora(inicioAnalisis1).substring(0,2) == "00"){
+                document.form_materia.text_materia.value ="Cursas Analisis Mat. en " + CalcularHora(inicioAnalisis1).substring(3,5) + " minutos."; 
              }
            } 
         
-           //HORARIO SINTAXIS
+           //HORARIO PARADIGMAS
         } else {
             document.querySelector('.grid-item:nth-child(26)').style.backgroundColor  = '#FF3402';
             document.querySelector('.grid-item:nth-child(25)').style.backgroundColor  = '#FF3402';  
            
-            if (horaDefinitiva >= inicioSintaxis){           
-                document.form_materia.text_materia.value ="Terminas de cursar Sintaxis en " +  CalcularHora(finSintaxis).substring(1,2) + " horas y " + CalcularHora(finSintaxis).substring(3,5) + " minutos."; 
-                if (CalcularHora(finSintaxis).substring(0,2) == "00"){
-                    document.form_materia.text_materia.value ="Terminas de cursar Sintaxis en " + CalcularHora(finSintaxis).substring(3,5) + " minutos."; 
+            if (horaDefinitiva >= inicioParadigmas){           
+                document.form_materia.text_materia.value ="Terminas de cursar Paradigmas en " +  CalcularHora(finParadigmas).substring(1,2) + " horas y " + CalcularHora(finParadigmas).substring(3,5) + " minutos."; 
+                if (CalcularHora(finParadigmas).substring(0,2) == "00"){
+                    document.form_materia.text_materia.value ="Terminas de cursar Paradigmas en " + CalcularHora(finParadigmas).substring(3,5) + " minutos."; 
                  }
             } else {
              if (horaDefinitiva.substring(0,1) == "0"){
        
-                document.form_materia.text_materia.value ="Cursas Sintaxis en " +  CalcularHora(inicioSintaxis).substring(0,2) + " horas y " +CalcularHora(inicioSintaxis).substring(3,5) + " minutos.";    
+                document.form_materia.text_materia.value ="Cursas Paradigmas en " +  CalcularHora(inicioParadigmas).substring(0,2) + " horas y " +CalcularHora(inicioParadigmas).substring(3,5) + " minutos.";    
              } else {
-                document.form_materia.text_materia.value ="Cursas Sintaxis en " +  CalcularHora(inicioSintaxis).substring(1,2) + " horas y " + CalcularHora(inicioSintaxis).substring(3,5) + " minutos.";   
+                document.form_materia.text_materia.value ="Cursas Paradigmas en " +  CalcularHora(inicioParadigmas).substring(1,2) + " horas y " + CalcularHora(inicioParadigmas).substring(3,5) + " minutos.";   
              }     
-             if (CalcularHora(inicioSintaxis).substring(0,2) == "00"){
-                document.form_materia.text_materia.value ="Cursas Sintaxis en " + CalcularHora(inicioSintaxis).substring(3,5) + " minutos."; 
+             if (CalcularHora(inicioParadigmas).substring(0,2) == "00"){
+                document.form_materia.text_materia.value ="Cursas Paradigmas en " + CalcularHora(inicioParadigmas).substring(3,5) + " minutos."; 
              }
            }   
         }
@@ -164,29 +160,27 @@ switch (diaSemana){
          document.querySelector('.grid-item:nth-child(15)').style.backgroundColor  = '#FF7957';
          document.querySelector('.grid-item:nth-child(21)').style.backgroundColor  = '#FF7957';
 
-     //HORARIO FISICA  
-     if (horaDefinitiva >= inicioDelDia && horaDefinitiva <= finFisicaMar) {
-            
-        document.querySelector('.grid-item:nth-child(7)').style.backgroundColor  = '#FF3402';
-        document.querySelector('.grid-item:nth-child(9)').style.backgroundColor  = '#FF3402';  
-        
-        if (horaDefinitiva >= inicioFisicaMar){           
-            document.form_materia.text_materia.value ="Terminas de cursar Física en " +  CalcularHora(finFisicaMar).substring(0,1) + " horas y " + CalcularHora(finFisicaMar).substring(2,5) + " minutos."; 
-            if (CalcularHora(finInglesMie).substring(0,1) == "00"){
-                document.form_materia.text_materia.value ="Terminas de cursar Física en " + CalcularHora(finFisicaMar).substring(2,5) + " minutos."; 
+         if (horaDefinitiva >= inicioDelDia && horaDefinitiva <= finAlgebra) {
+
+            document.querySelector('.grid-item:nth-child(9)').style.backgroundColor  = '#FF3402';
+            document.querySelector('.grid-item:nth-child(7)').style.backgroundColor  = '#FF3402';  
+           
+            if (horaDefinitiva >= inicioAlgebra){           
+                document.form_materia.text_materia.value ="Terminas de cursar Álgebra en " +  CalcularHora(finAlgebra).substring(1,2) + " horas y " + CalcularHora(finAlgebra).substring(3,5) + " minutos."; 
+                if (CalcularHora(finAlgebra).substring(0,2) == "00"){
+                    document.form_materia.text_materia.value ="Terminas de cursar Álgebra en " + CalcularHora(finAlgebra).substring(3,5) + " minutos."; 
+                 }
+            } else {
+   
+             if (horaDefinitiva.substring(0,1) == "0"){
+       
+                document.form_materia.text_materia.value ="Cursas Álgebra en " +  CalcularHora(inicioAlgebra).substring(1,2) + " horas y " +CalcularHora(inicioAlgebra).substring(3,5) + " minutos.";    
+             }    
+             if (CalcularHora(inicioAlgebra).substring(0,2) == "00"){
+                document.form_materia.text_materia.value ="Cursas Álgebra en " + CalcularHora(inicioAlgebra).substring(3,5) + " minutos."; 
              }
-        } else {
-         if (horaDefinitiva.substring(0,1) == "0"){
-        
-            document.form_materia.text_materia.value ="Cursas Física en " +  CalcularHora(inicioFisicaMar).substring(1,2) + " horas y " +CalcularHora(inicioFisicaMar).substring(3,5) + " minutos.";    
-         } else {
-            document.form_materia.text_materia.value ="Cursas Física en " +  CalcularHora(inicioFisicaMar).substring(0,2) + " horas y " + CalcularHora(inicioFisicaMar).substring(3,5) + " minutos.";   
-         }     
-         if (CalcularHora(inicioFisicaMar).substring(0,2) == "00"){
-            document.form_materia.text_materia.value ="Cursas Física en " + CalcularHora(inicioFisicaMar).substring(3,5) + " minutos."; 
-         }
-       }   
-    //HORARIO ANALISIS
+           }  
+    //HORARIO ANALISIS DE SISTEMAS
     
     } else {
         if (horaDefinitiva >= inicioDelDia && horaDefinitiva <= finAnalisis) {
@@ -220,53 +214,49 @@ switch (diaSemana){
          document.querySelector('.grid-item:nth-child(22)').style.backgroundColor  = '#FF7957';
          document.querySelector('.grid-item:nth-child(28)').style.backgroundColor  = '#FF7957';
 
-     //HORARIO INGLES  
-     if (horaDefinitiva >= inicioDelDia && horaDefinitiva <= finInglesMie) {
-            
-        document.querySelector('.grid-item:nth-child(13)').style.backgroundColor  = '#FF3402';
-        document.querySelector('.grid-item:nth-child(16)').style.backgroundColor  = '#FF3402';  
-        
-        if (horaDefinitiva >= inicioInglesMie){           
-            document.form_materia.text_materia.value ="Terminas de cursar Ingles en " +  CalcularHora(finInglesMie).substring(0,1) + " horas y " + CalcularHora(finInglesMie).substring(2,5) + " minutos."; 
-            if (CalcularHora(finInglesMie).substring(0,1) == "00"){
-                document.form_materia.text_materia.value ="Terminas de cursar Ingles en " + CalcularHora(finInglesMie).substring(2,5) + " minutos."; 
-             }
-        } else {
-         if (horaDefinitiva.substring(0,1) == "0"){
-        
-            document.form_materia.text_materia.value ="Cursas Ingles en " +  CalcularHora(inicioInglesMie).substring(1,2) + " horas y " +CalcularHora(inicioInglesMie).substring(3,5) + " minutos.";    
-         } else {
-            document.form_materia.text_materia.value ="Cursas Ingles en " +  CalcularHora(inicioInglesMie).substring(0,2) + " horas y " + CalcularHora(inicioInglesMie).substring(3,5) + " minutos.";   
-         }     
-         if (CalcularHora(inicioInglesMie).substring(0,2) == "00"){
-            document.form_materia.text_materia.value ="Cursas Ingles en " + CalcularHora(inicioInglesMie).substring(3,5) + " minutos."; 
-         }
-       }   
-    //HORARIO SINTAXIS
-    
-    } else {
-        if (horaDefinitiva >= inicioDelDia && horaDefinitiva <= finSintaxis) {
-            document.querySelector('.grid-item:nth-child(28)').style.backgroundColor  = '#FF3402';
-            document.querySelector('.grid-item:nth-child(25)').style.backgroundColor  = '#FF3402';  
-           
-            if (horaDefinitiva >= inicioSintaxis){           
-                document.form_materia.text_materia.value ="Terminas de cursar Sintaxis en " +  CalcularHora(finSintaxis).substring(1,2) + " horas y " + CalcularHora(finSintaxis).substring(3,5) + " minutos."; 
-                if (CalcularHora(finSintaxis).substring(0,2) == "00"){
-                    document.form_materia.text_materia.value ="Terminas de cursar Sintaxis en " + CalcularHora(finSintaxis).substring(3,5) + " minutos."; 
-                 }
-            } else {
-             if (horaDefinitiva.substring(0,1) == "0"){
-       
-                document.form_materia.text_materia.value ="Cursas Sintaxis en " +  CalcularHora(inicioSintaxis).substring(0,2) + " horas y " +CalcularHora(inicioSintaxis).substring(3,5) + " minutos.";    
-             } else {
-                document.form_materia.text_materia.value ="Cursas Sintaxis en " +  CalcularHora(inicioSintaxis).substring(1,2) + " horas y " + CalcularHora(inicioSintaxis).substring(3,5) + " minutos.";   
-             }     
-             if (CalcularHora(inicioSintaxis).substring(0,2) == "00"){
-                document.form_materia.text_materia.value ="Cursas Sintaxis en " + CalcularHora(inicioSintaxis).substring(3,5) + " minutos."; 
-             }
-           }   
-        }
+     //HORARIO ANALISIS 1    
+     if (horaDefinitiva >= inicioDelDia && horaDefinitiva <= finAnalisis1) {
+
+      document.querySelector('.grid-item:nth-child(13)').style.backgroundColor  = '#FF3402';
+      document.querySelector('.grid-item:nth-child(16)').style.backgroundColor  = '#FF3402';  
+     
+      if (horaDefinitiva >= inicioAnalisis1){           
+          document.form_materia.text_materia.value ="Terminas de cursar Analisis Mat. en " +  CalcularHora(finAnalisis1).substring(1,2) + " horas y " + CalcularHora(finAnalisis1).substring(3,5) + " minutos."; 
+          if (CalcularHora(finAnalisis1).substring(0,2) == "00"){
+              document.form_materia.text_materia.value ="Terminas de cursar Analisis Mat. en " + CalcularHora(finAnalisis1).substring(3,5) + " minutos."; 
+           }
+      } else {
+
+       if (horaDefinitiva.substring(0,1) == "0"){
+ 
+          document.form_materia.text_materia.value ="Cursas Analisis Mat. en " +  CalcularHora(inicioAnalisis1).substring(1,2) + " horas y " +CalcularHora(inicioAnalisis1).substring(3,5) + " minutos.";    
+       }    
+       if (CalcularHora(inicioAnalisis1).substring(0,2) == "00"){
+          document.form_materia.text_materia.value ="Cursas Analisis Mat. en " + CalcularHora(inicioAnalisis1).substring(3,5) + " minutos."; 
+       }
      }
+      //HORARIO PARADIGMAS
+   } else {
+      document.querySelector('.grid-item:nth-child(28)').style.backgroundColor  = '#FF3402';
+      document.querySelector('.grid-item:nth-child(25)').style.backgroundColor  = '#FF3402';  
+     
+      if (horaDefinitiva >= inicioParadigmas){           
+          document.form_materia.text_materia.value ="Terminas de cursar Paradigmas en " +  CalcularHora(finParadigmas).substring(1,2) + " horas y " + CalcularHora(finParadigmas).substring(3,5) + " minutos."; 
+          if (CalcularHora(finParadigmas).substring(0,2) == "00"){
+              document.form_materia.text_materia.value ="Terminas de cursar Paradigmas en " + CalcularHora(finParadigmas).substring(3,5) + " minutos."; 
+           }
+      } else {
+       if (horaDefinitiva.substring(0,1) == "0"){
+ 
+          document.form_materia.text_materia.value ="Cursas Paradigmas en " +  CalcularHora(inicioParadigmas).substring(0,2) + " horas y " +CalcularHora(inicioParadigmas).substring(3,5) + " minutos.";    
+       } else {
+          document.form_materia.text_materia.value ="Cursas Paradigmas en " +  CalcularHora(inicioParadigmas).substring(1,2) + " horas y " + CalcularHora(inicioParadigmas).substring(3,5) + " minutos.";   
+       }     
+       if (CalcularHora(inicioParadigmas).substring(0,2) == "00"){
+          document.form_materia.text_materia.value ="Cursas Paradigmas en " + CalcularHora(inicioParadigmas).substring(3,5) + " minutos."; 
+       }
+     }   
+  }
     break;
 
     case 'Thu': //JUEVES
@@ -278,7 +268,7 @@ switch (diaSemana){
 
        
         //HORARIO FISICA
-            if (horaDefinitiva >= inicioDelDia && horaDefinitiva <= finFisicaJue) {
+         /*   if (horaDefinitiva >= inicioDelDia && horaDefinitiva <= finFisicaJue) {
                 document.querySelector('.grid-item:nth-child(7)').style.backgroundColor  = '#FF3402';
                 document.querySelector('.grid-item:nth-child(11)').style.backgroundColor  = '#FF3402';  
                
@@ -301,7 +291,7 @@ switch (diaSemana){
             }
        
      
-    break;
+    break; */
 
      case 'Fri': //VIERNES
 
@@ -311,34 +301,34 @@ switch (diaSemana){
           document.querySelector('.grid-item:nth-child(24)').style.backgroundColor  = '#FF7957';
           document.querySelector('.grid-item:nth-child(30)').style.backgroundColor  = '#FF7957';
 
-         //HORARIO INGLES 
-         if (horaDefinitiva >= inicioDelDia && horaDefinitiva <= finInglesVie) {
-            document.querySelector('.grid-item:nth-child(13)').style.backgroundColor  = '#FF3402';
-            document.querySelector('.grid-item:nth-child(18)').style.backgroundColor  = '#FF3402';  
-            
-            if (horaDefinitiva >= inicioInglesVie){           
-                document.form_materia.text_materia.value ="Terminas de cursar Ingles en " +  CalcularHora(finInglesVie).substring(1,2) + " horas y " + CalcularHora(finInglesVie).substring(3,5) + " minutos."; 
-                if (CalcularHora(finInglesVie).substring(0,2) == "00"){
-                    document.form_materia.text_materia.value ="Terminas de cursar Ingles en " + CalcularHora(finInglesVie).substring(3,5) + " minutos."; 
-                 }
-            } else {
-             if (horaDefinitiva.substring(0,1) == "0"){
-       
-                document.form_materia.text_materia.value ="Cursas Ingles en " +  CalcularHora(inicioInglesVie).substring(0,2) + " horas y " +CalcularHora(inicioInglesVie).substring(3,5) + " minutos.";    
-             } else {
-                document.form_materia.text_materia.value ="Cursas Ingles en " +  CalcularHora(inicioInglesVie).substring(1,2) + " horas y " + CalcularHora(inicioInglesVie).substring(3,5) + " minutos.";   
-             }     
-             if (CalcularHora(inicioInglesVie).substring(0,2) == "00"){
-                document.form_materia.text_materia.value ="Cursas Ingles en " + CalcularHora(inicioInglesVie).substring(3,5) + " minutos."; 
-             }
-           }   
+         //HORARIO ALGEBRA  
+      if (horaDefinitiva >= inicioDelDia && horaDefinitiva <= finAlgebra) {
+
+         document.querySelector('.grid-item:nth-child(12)').style.backgroundColor  = '#FF3402';
+         document.querySelector('.grid-item:nth-child(7)').style.backgroundColor  = '#FF3402';  
+        
+         if (horaDefinitiva >= inicioAlgebra){           
+             document.form_materia.text_materia.value ="Terminas de cursar Álgebra en " +  CalcularHora(finAlgebra).substring(1,2) + " horas y " + CalcularHora(finAlgebra).substring(3,5) + " minutos."; 
+             if (CalcularHora(finAlgebra).substring(0,2) == "00"){
+                 document.form_materia.text_materia.value ="Terminas de cursar Álgebra en " + CalcularHora(finAlgebra).substring(3,5) + " minutos."; 
+              }
+         } else {
+
+          if (horaDefinitiva.substring(0,1) == "0"){
+    
+             document.form_materia.text_materia.value ="Cursas Álgebra en " +  CalcularHora(inicioAlgebra).substring(1,2) + " horas y " +CalcularHora(inicioAlgebra).substring(3,5) + " minutos.";    
+          }    
+          if (CalcularHora(inicioAlgebra).substring(0,2) == "00"){
+             document.form_materia.text_materia.value ="Cursas Álgebra en " + CalcularHora(inicioAlgebra).substring(3,5) + " minutos."; 
+          }
+        }    
         } else {
          document.form_materia.text_materia.value ="Es momento de descansar, o estudiar... :)";
         }
      break;
 
      default:
-        document.form_materia.text_materia.value ="Es momento de descansar, o estudiar... :)"; 
+        document.form_materia.text_materia.value ="Es momento de descansar, o estudiar... :)";
      break;
 }
 
